@@ -102,6 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5053462177187613933}
   - component: {fileID: 8458157863278966228}
+  - component: {fileID: 3916204644062217852}
   m_Layer: 0
   m_Name: Player Goose
   m_TagString: Untagged
@@ -147,6 +148,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3916204644062217852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613944458440885048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dfe59e976704424392ec56b246253c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &702713933573786546
 PrefabInstance:
   m_ObjectHideFlags: 0
