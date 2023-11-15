@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2632433161526029531}
   serializedVersion: 2
   m_LocalRotation: {x: 0.067129, y: -0, z: -0, w: 0.9977443}
-  m_LocalPosition: {x: 40.428864, y: 283.1187, z: -320.06284}
+  m_LocalPosition: {x: 39.8, y: 278.3, z: -320.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -102,7 +102,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5053462177187613933}
   - component: {fileID: 8458157863278966228}
-  - component: {fileID: 3916204644062217852}
   m_Layer: 0
   m_Name: Player Goose
   m_TagString: Untagged
@@ -148,75 +147,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3916204644062217852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6613944458440885048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dfe59e976704424392ec56b246253c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movement:
-    m_Name: Movement
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 3e4de5b5-3347-44a6-a54a-7ead67b5368c
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2D Vector
-      m_Id: 83814e2e-d499-42d4-8705-22132310e77f
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 4
-    - m_Name: up
-      m_Id: cc8a9400-d0c9-4055-bffa-66787e66295c
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 7036043f-a612-4145-8ed7-7bf036d5d470
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 088010c2-cb06-4953-a879-1ca0854e8e20
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 80b7818d-f4dd-4c55-88d9-2790744ff72f
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: 
-      m_Id: 4c53f8de-d642-45c6-8d68-20ae604d0ba1
-      m_Path: 
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 0
-    m_Flags: 0
 --- !u!1001 &702713933573786546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267,7 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4779121621112473487, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
       propertyPath: m_Name
-      value: StarSparrow20
+      value: Player Ship
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
