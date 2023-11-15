@@ -1,38 +1,44 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-// using UnityEngine.inp
 
 public class PlayerControls : MonoBehaviour
 {
 
-    [SerializeField] InputAction movement;
+    // [SerializeField] InputAction movement;
+    [SerializeField] float controlSpeed = 50f;
+    [SerializeField] float xRange = 25f;
+    [SerializeField] float yRange = 3.5f;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    void OnEnable() {
-        movement.Enable();    
-    }
+    // void OnEnable() {
+    //     movement.Enable();    
+    // }
 
-    void OnDisable() {
-        movement.Disable();
-    }
+    // void OnDisable() {
+    //     movement.Disable();
+    // }
     
     // Update is called once per frame
     void Update()
     {
 
-        float horizontalThrow = movement.ReadValue<Vector2>().x;
-        float verticalThrow = movement.ReadValue<Vector2>().y;
+        float xThrow = Input.GetAxis("Horizontal");
+        float yThrow = Input.GetAxis("Vertical");
 
-        // float horizontalThrow = Input.GetAxis("Horizontal");
-        Debug.Log(horizontalThrow);
+        float xOffset = xThrow * Time.deltaTime * controlSpeed;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
 
-        // float verticalThrow = Input.GetAxis("Vertical");
-        Debug.Log(verticalThrow);
+        float yOffset = yThrow * Time.deltaTime * controlSpeed;
+        float rawYPos = transform.localPosition.y + yOffset;
+        float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
+        
+        transform.localPosition = new Vector3(
+            clampedXPos,
+            clampedYPos,
+            transform.localPosition.z
+        );
     }
 }
