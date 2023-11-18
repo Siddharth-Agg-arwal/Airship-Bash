@@ -2,16 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
-
-    // [SerializeField] InputAction movement;
     [SerializeField] float controlSpeed = 20f;
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 3.5f;
-    Vector3 currentPosition;
+    [SerializeField] float positionPitchFactor = -2f;
+    [SerializeField] float controlPitchFactor = -10f;
+    float xThrow, yThrow;
     // void OnEnable() {
     //     movement.Enable();    
     // }
@@ -28,7 +27,7 @@ public class PlayerControls : MonoBehaviour
     }
 
     void ProcessRotation(){
-        float pitch = 0f;
+        float pitch = transform.localPosition.y * positionPitchFactor + yThrow * controlPitchFactor;
         float yaw = 0f;
         float roll = 0f;
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
