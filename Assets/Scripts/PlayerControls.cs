@@ -52,6 +52,8 @@ public class PlayerControls : MonoBehaviour
         Debug.Log(clampedXPos);
         Debug.Log(clampedYPos);
 
+        //LOOK INTO CLAMP IMPLEMENTATION IF IT IS EVEN POSSIBLE
+        
         transform.localPosition = new Vector3(
             clampedXPos,
             clampedYPos,
