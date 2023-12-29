@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2632433161526029531}
   serializedVersion: 2
   m_LocalRotation: {x: 0.067129, y: -0, z: -0, w: 0.9977443}
-  m_LocalPosition: {x: 39.8, y: 278.3, z: -320.1}
+  m_LocalPosition: {x: 1, y: 15.6, z: -56.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -102,6 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5053462177187613933}
   - component: {fileID: 8458157863278966228}
+  - component: {fileID: 7792744834820611918}
   m_Layer: 0
   m_Name: Player Goose
   m_TagString: Untagged
@@ -147,6 +148,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7792744834820611918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613944458440885048}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dfe59e976704424392ec56b246253c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlSpeed: 10
+  xRange: 30
+  yRange: 3.5
+  positionPitchFactor: 2
+  controlPitchFactor: -10
+  positionYawFactor: 3
+  controlRollFactor: -10
 --- !u!1001 &702713933573786546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157,15 +177,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1592900794447237722, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.029
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1592900794447237722, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 274.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1592900794447237722, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -276.56
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1592900794447237722, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -173,15 +193,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1592900794447237722, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1592900794447237722, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1592900794447237722, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1592900794447237722, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -202,10 +222,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4779121621112473487, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6548580300365584540}
   m_SourcePrefab: {fileID: 100100000, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
 --- !u!4 &2295591490456721896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1592900794447237722, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
   m_PrefabInstance: {fileID: 702713933573786546}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5445506512467151933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4779121621112473487, guid: 4e90ce052d8c1d241811391026b898cc, type: 3}
+  m_PrefabInstance: {fileID: 702713933573786546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6548580300365584540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5445506512467151933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dfe59e976704424392ec56b246253c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlSpeed: 30
+  xRange: 25
+  yRange: 6
+  positionPitchFactor: 2
+  controlPitchFactor: -10
+  positionYawFactor: 1
+  controlRollFactor: -20
